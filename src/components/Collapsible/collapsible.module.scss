@@ -1,0 +1,17 @@
+.collapsible {
+    padding-right: 14px;
+    position: relative;
+
+    &__icon-container {
+        position: relative;
+    }
+    
+    &__icon-container::after {
+        content: "";
+        border-top: 1px solid #263238;
+        width: 100%;
+        position: absolute;
+        top: 7.5px;
+        left: 14px;
+    }
+}

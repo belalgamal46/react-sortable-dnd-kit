@@ -1,0 +1,25 @@
+.draggable-item {
+    opacity: 1;
+    display: flex;
+    justify-content: flex-start;
+
+    &__handle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        padding: 0 5px;
+        border-radius: 4px 0 0 4px;
+        background-color: #607d8b;
+        outline: none;
+        cursor: grab;
+    }
+
+    &--is-dragging {
+        opacity: 0.2;
+    }
+
+    &--is-sorting {
+        border: 1px solid red;
+    }
+}

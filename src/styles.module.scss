@@ -1,0 +1,28 @@
+:global(*) {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.draggable-item {
+    display: flex;
+    align-items: center;
+    height: 36px;
+    border-radius: 0 4px 4px 0;
+    gap: 12px;
+    padding: 0 12px;
+    border: 1px solid #c8c8c8;
+    border-left: none;
+
+    &__remove-button {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+    }
+}
+
+:global(ul) {
+    list-style: none;
+}
+
+
