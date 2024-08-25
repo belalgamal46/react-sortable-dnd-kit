@@ -1,5 +1,5 @@
 import { CSS } from "@dnd-kit/utilities";
-import { FC } from "react";
+import { FC, useState } from "react";
 import { DraggableItemPropsTypes } from "./draggableItem.types";
 import { useSortable } from "@dnd-kit/sortable";
 import Handle from "../Handle/Handle";
@@ -62,7 +62,7 @@ const DraggableItem: FC<DraggableItemPropsTypes> = ({
                     {...listeners}
                     {...attributes}
                 >
-                    {dragHandleIcon && dragHandleIcon}
+                    {dragHandleIcon}
                 </Handle>
             )}
 

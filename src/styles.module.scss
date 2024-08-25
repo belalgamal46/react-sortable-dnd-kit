@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+// :global(body) {
+//     background-color: #c8c8c8;
+// }
+
 .draggable-item {
     display: flex;
     align-items: center;
@@ -24,5 +28,3 @@
 :global(ul) {
     list-style: none;
 }
-
-

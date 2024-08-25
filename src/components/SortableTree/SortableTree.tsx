@@ -115,34 +115,41 @@ const SortableTree: FC<SortableItemsPropsTypes> = ({
             >
                 <ul className={styles["sortable-tree"]}>
                     {items.map((item) => (
-                        <DraggableItem
-                            id={item.id}
-                            dragHandle={dragHandle}
-                            key={item.id}
-                            removable={removable}
-                            collapsible={collapsible}
-                            dragHandleIcon={dragHandleIcon}
-                            draggableContainerClassName={classNames(
-                                draggableContainerClassName,
-                                styles["sortable-tree__item"]
-                            )}
-                        >
-                            {node ? (
-                                node({
-                                    ...item,
-                                    id: item.id,
-                                    title: item.title,
-                                    collapsed: item.collapsed,
-                                    children: item.children,
-                                })
-                            ) : (
-                                <span
-                                    className={styles["draggable-item__body"]}
-                                >
-                                    {item.title}
-                                </span>
-                            )}
-                        </DraggableItem>
+                        <div key={item.id}>
+                            <DraggableItem
+                                id={item.id}
+                                dragHandle={dragHandle}
+                                key={item.id}
+                                removable={removable}
+                                collapsible={collapsible}
+                                dragHandleIcon={dragHandleIcon}
+                                draggableContainerClassName={classNames(
+                                    draggableContainerClassName,
+                                    styles["sortable-tree__item"],
+                                    "sortable-tree__item"
+                                )}
+                            >
+                                {node ? (
+                                    <>
+                                        {node({
+                                            ...item,
+                                            id: item.id,
+                                            title: item.title,
+                                            collapsed: item.collapsed,
+                                            children: item.children,
+                                        })}
+                                    </>
+                                ) : (
+                                    <div
+                                        className={
+                                            styles["draggable-item__body"]
+                                        }
+                                    >
+                                        {item.title}
+                                    </div>
+                                )}
+                            </DraggableItem>
+                        </div>
                     ))}
                 </ul>
             </SortableContext>

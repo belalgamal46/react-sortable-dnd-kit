@@ -3,6 +3,23 @@
     display: flex;
     justify-content: flex-start;
 
+    &::before {
+        position: absolute;
+        border-left: 1px solid black;
+        height: 100%;
+        content: "";
+        left: -16.8px;
+        bottom: 0;
+    }
+
+    &:first-child::before {
+        top: calc(50% - 7px);
+    }
+
+    &:last-child::before {
+        bottom: calc(50% - -7px);
+    }
+
     &__handle {
         display: flex;
         align-items: center;
@@ -13,6 +30,7 @@
         background-color: #607d8b;
         outline: none;
         cursor: grab;
+        margin-inline-start: 16px;
     }
 
     &--is-dragging {

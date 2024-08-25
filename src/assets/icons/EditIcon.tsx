@@ -1,11 +1,5 @@
 import React, { FC } from "react";
-
-export type SvgPropsTypes = {
-    width?: string;
-    height?: string;
-    fill?: string;
-    stroke?: string;
-};
+import { SvgPropsTypes } from "./SvgProps";
 
 const EditIcon: FC<SvgPropsTypes> = ({
     width = "15",
@@ -14,7 +8,7 @@ const EditIcon: FC<SvgPropsTypes> = ({
 }) => {
     return (
         <svg width={width} height={height} viewBox="0 0 15 14" fill={fill}>
-            <g clip-path="url(#clip0_4050_33376)">
+            <g clipPath="url(#clip0_4050_33376)">
                 <path
                     d="M11.5833 7.02705C11.2607 7.02705 11 7.28842 11 7.61035V12.2771C11 12.5984 10.7386 12.8604 10.4167 12.8604H2.25C1.92796 12.8604 1.6667 12.5984 1.6667 12.2771V4.11035C1.6667 3.78896 1.92796 3.52705 2.25 3.52705H6.9167C7.23927 3.52705 7.5 3.26569 7.5 2.94376C7.5 2.62172 7.23927 2.36035 6.9167 2.36035H2.25C1.28517 2.36035 0.5 3.14552 0.5 4.11035V12.2771C0.5 13.2419 1.28517 14.0271 2.25 14.0271H10.4167C11.3815 14.0271 12.1667 13.2419 12.1667 12.2771V7.61035C12.1667 7.28778 11.9059 7.02705 11.5833 7.02705Z"
                     fill={fill}

@@ -1,17 +1,23 @@
-import React, { FC } from "react";
-import { SvgPropsTypes } from "./EditIcon";
+import { FC } from "react";
+import { SvgPropsTypes } from "./SvgProps";
 
 const MinusCollapse: FC<Omit<SvgPropsTypes, "fill">> = ({
     width = "17",
     height = "16",
     stroke = "#263238",
+    ...rest
 }) => {
     return (
-        <svg width={width} height={height} viewBox="0 0 17 16" fill="none">
-            <g clip-path="url(#clip0_4683_14713)">
+        <svg
+            width={width}
+            height={height}
+            viewBox="0 0 17 16"
+            fill="none"
+            {...rest}
+        >
+            <g clipPath="url(#clip0_4683_14713)">
                 <mask
                     id="mask0_4683_14713"
-                    // style="mask-type:luminance"
                     maskUnits="userSpaceOnUse"
                     x="0"
                     y="0"

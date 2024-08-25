@@ -5,6 +5,7 @@ import { arrayMove } from "@dnd-kit/sortable";
 const initialState: InitialStateTypes = {
     treeData: [],
     activeItemId: "",
+    coords: [],
 };
 
 export const treeDataSlice = createSlice({
